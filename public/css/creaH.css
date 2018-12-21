@@ -1,0 +1,32 @@
+.container_creaH{
+    height: 100vh;
+    display: flex;
+}
+
+.form_creaH{
+    margin:auto;
+
+}
+
+.head_creaH h3{
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.prop_creaH{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.btn_creaH input{
+    background-color: #e14b5c;
+    border: 0px;
+    border-radius: 20px;
+
+}
+
+.genre_creaH{
+    margin: 1em;
+}

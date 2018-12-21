@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+
+html{
+    padding:0;
+    margin:0;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:#272727;
+}
+
+/*HEADER*/
+.header{
+    margin-top:0;
+    width:100%;
+    position:fixed;
+    height:100px;
+    z-index:999;
+    margin:0;
+
+
+}
+
+.header #logo{
+    font-family: 'Roboto', sans-serif;
+    font-weight:600;
+    float:left;
+    color:#fff;
+    line-height:100px;
+    margin-left:4%;
+}
+
+#logo a{
+    color:#fff;
+    text-decoration:none;
+    FONT-SIZE:30PX;
+    FONT-WEIGHT:700;
+}
+
+#logo a:hover{
+    color:#e14b5c;
+}
+.affiche-login{
+    color:#fff;
+}
+.name{
+    text-transform: uppercase;
+    color:#e14b5c;
+    padding:0px  7px;
+}
+.header ul{
+    display:flex;
+    list-style-type: none;
+    line-height:70px;
+    font-weight:600;
+    font-family: 'Roboto', sans-serif;
+    float:right;
+    margin-right:8%;
+
+
+
+}
+
+.header ul li{
+    padding: 0% 30px;
+    display:inline-block;
+}
+
+.header ul li a{
+    text-decoration:none;
+    color:#fff;
+    transition:.3s;
+
+}
+
+.header ul li a:hover{
+
+    color:#e14b5c;
+}
+
+
+.black{
+    background-color: #544c5f;
+    -webkit-transition : all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+    -webkit-box-shadow:0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+    height:110px;
+    position:fixed;
+    z-index:999;
+    width:100%;
+    margin:0;
+    line-height:110px;
+}
+
+
+
+.affiche-login i{
+    padding:0 16px;
+}
+
+
+
+.header-toggle{
+    display:none;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .header ul li a{
+        display:block;
+        font-size:12px;
+
+
+    }
+
+    .header-toggle{
+        position:absolute;
+        right:10px;
+        top:25px;
+        display:block;
+    }
+
+
+    .header-toggle-close{
+        display:none;
+    }
+    .header-toggle-open{
+        display:inline-block;
+
+    }
+    #main-header:target .header-toggle-close{
+        display:inline-block;
+    }
+
+    #main-header:target .header-toggle-open{
+        display:none;
+    }
+
+
+    .header{
+        background-color: #544c5f;
+        margin:0;
+    }
+
+    .header ul{
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 300ms ease-in-out;
+        background-color: #544c5f;
+        width:100%;
+        padding:0;
+        margin:-10px 0;
+
+    }
+
+
+
+
+    #main-header:target ul{
+        max-height:300px;
+        width:100%;
+
+    }
+
+    .affiche-login i{
+        display:none;
+    }
+
+
+    .title{
+        font-size:90px !important;
+        margin-bottom:0;
+    }
+
+    .subtitle{
+        font-size:40px !important;
+        position:absolute;
+        top:10%;
+    }
+
+
+    .section-title{
+        font-size:25px !important;
+        margin-top:15% !important;
+
+    }
+
+    .icon{
+        width:60px !important;
+        height:60px !important;
+    }
+
+    .icon i {
+        font-size:30px !important;
+        margin-top:60% !important;
+    }
+
+    .img-grotte{
+        DISPLAY:NONE;
+    }
+
+    .grid2{
+        display:flex !important;
+        justify-content:center;
+    }
+
+    .mosaic{
+        margin-top:8%;
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1500px) {
+
+
+    .header ul{
+        margin-right:2% !important;
+        float:right !important;
+    }
+    .header ul li {
+        padding:0 8px !important;
+
+
+    }
+
+    .img-grotte{
+        DISPLAY:NONE;
+    }
+
+    .grid2{
+        display:flex !important;
+        justify-content:center;
+    }
+
+    .mosaic{
+        margin-top:8%;
+    }
+
+
+    .section-title{
+        font-size:45px !important;
+        margin-top:8% !important;
+
+    }
+
+    .icon{
+        width:80px !important;
+        height:80px !important;
+
+    }
+
+    .icon i {
+        font-size:50px !important;
+        margin-top:50% !important;
+        margin-left:50% !important;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*HEADER*/
+
+
+
+
+
+
+
+
+
+
+
+/*BANNER*/
+
+.banner{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background-image:url(../img/banner2.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+.banner .title{
+    font-size:150px;
+    font-weight:700;
+    color:#fff;
+    position:absolute;
+    top:25%;
+    left:8%;
+    font-family: 'Bangers', cursive;
+}
+
+.banner .subtitle{
+    font-size:80px;
+    font-weight:500;
+    color:#fff;
+    position:absolute;
+    top:37%;
+    left:8%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*BANNER*/
+
+
+
+
+
+
+/*HISTOIRE GRID*/
+
+.history{
+    position: relative;
+    background-color: #272727;
+    margin: 0;
+    padding:6% 0px;
+}
+
+
+
+.icon{
+    display:block;
+    width:80px;
+    height:80px;
+    background-color:#e14b5c;
+    border-radius:50%;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:5%;
+    z-index:0;
+
+}
+
+
+.icon i{
+    font-size:50px;
+    color:#fff;
+    margin-left:50%;
+    margin-top:50%;
+    transform:translate(-50%,-50%);
+
+}
+.section-title{
+    position:relative;
+    text-align: center;
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+    font-size:40px;
+    text-transform:uppercase;
+    margin-top:2%;
+
+}
+.mosaic{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px;
+
+}
+
+.column{
+
+    width:auto;
+    height:auto;
+    position:relative;
+    margin:8% 10%;
+    overflow:hidden;
+}
+
+.column img{
+    width:100%;
+
+}
+
+
+.mosaic a{
+    text-decoration:none;
+    transition:.3s;
+}
+
+.mosaic a:hover{
+    transform:translate3d(0,0,0) scale(1.05);
+    color:#e14b5c;
+
+}
+.text-about{
+    font-family: 'Roboto', sans-serif;
+    margin-top:7%;
+    text-align:center;
+    font-size:30px;
+    color:#000;
+    font-weight:700;
+
+}
+
+
+/* HISTOIRES GRID*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.login-form{
+    width:100%;
+    height:auto;
+    background-color:#272727;
+    position:relative;
+    z-index:4;
+    padding:5% 0%;
+    float:left;
+}
+
+
+
+
+
+.login-form img{
+    width:50%;
+    float:right;
+}
+
+
+
+.grid2{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 700px;
+    margin-top:7%;
+    width:100%;
+
+
+
+}
+
+.field-textarea{
+    width:100%;
+    height:200px;
+}
+
+.form-style-1 {
+    list-style-type:none;
+    margin-top:10%;
+    width:100%;
+    height:100%;
+}
+
+.grid2 .img-grotte img{
+    width:100%;
+}
+
+#sign{
+    margin-left:60%;
+}
+
+/*FOOTER*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LOGIN*/
+
+
+body{
+    background-color: #32383e;
+}
+.container {
+    height: 65vh;
+    display: flex;
+
+}
+
+form{
+    font-family: Roboto;
+    color:white;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form{
+    font-size: 4rem;
+    margin:2rem;
+
+
+
+}
+
+
+input{
+    font-size: 1rem;
+    color: #fff;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    line-height: 1rem;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid ;
+    text-align: center;
+    width:100%;
+
+}
+
+
+button{
+    margin-top: 2rem;
+    background-color: #e14b5c;
+    color:white;
+    padding: 0.4rem 1rem;
+    border: solid 1px transparent;
+    border-radius: 20px;
+
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+}
+
+
+.form-control{
+    width: 100%;
+    text-align: center;
+}
+
+.form-group{
+    padding-right: 2rem;
+}
+
+.form-check {
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+
+}
+
+.form-check-label{
+
+
+}
+
+

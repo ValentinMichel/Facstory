@@ -1,0 +1,78 @@
+.corps2{
+    width:100%;
+    height:100vh;
+    font-family: 'Roboto', sans-serif;
+overflow:hidden;}
+
+.global{
+    margin-top:5%;
+}
+
+.divHistoires{
+
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin:0;
+
+}
+
+.divHistoires img{
+    width:30%;
+    margin-top:30px;
+    margin-bottom: 30px;
+    height:auto;
+
+
+}
+
+
+.short-title{
+
+    margin-left:42%;
+    font-size:50px;
+    margin-bottom: 20px;
+
+}
+
+
+hr{
+    width:5%;
+    margin-top:1%;
+    height:4px;
+    margin-left:45%;
+    color:#e14b5c;
+    background-color:#e14b5c;
+    text-align:center;
+    margin-bottom:1%;
+}
+.paragraphe{
+
+    color: white;
+    text-align:justify;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom:3%;
+
+}
+
+
+
+.possibilite{
+    margin-left:40%;
+    margin-top:5%;
+}
+.possibilite a{
+    color:#fff;
+    font-size:25px;
+    float:left;
+    text-decoration:none;
+    padding:20px 20px;
+    font-weight:700;
+
+
+
+}
+
+ .possibilite a:hover{
+    color:#e14b5c;
+}

@@ -39,7 +39,14 @@
                         <td>{{$hist->id}}</td>
                         <td>{{$hist->titre}}</td>
                         <td>{{$hist->pitch}}</td>
-                        <td>{{$hist->genre_id}}</td>
+                        <td>
+                            @php($listeGenre = DB::table('genre')->get())
+                            @foreach($listeGenre as $genre)
+                                @if($genre->id == $hist->genre_id)
+                                    {{$genre->label}}
+                                @endif
+                            @endforeach
+                        </td>
                         <td>
                             @if($hist->active == '1')
                                 <span style="color: green;">Visible</span>

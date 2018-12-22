@@ -18,13 +18,13 @@
         <table class="table_creaC">
             <thead style="background-color: #ddd; font-weight: bold;">
             <tr>
-                <td class="header_creaC">Histoire</td>
-                <td class="header_creaC">Titre</td>
-                <td class="header_creaC">Descrition</td>
-                <td class="header_creaC">Genre</td>
-                <td class="header_creaC">Visibilité</td>
-                <td class="header_creaC">Créée le</td>
-                <td class="header_creaC">mise a jour</td>
+                <th class="header_creaC">Histoire</th>
+                <th class="header_creaC">Titre</th>
+                <th class="header_creaC">Descrition</th>
+                <th class="header_creaC">Genre</th>
+                <th class="header_creaC">Visibilité</th>
+                <th class="header_creaC">Créée le</th>
+                <th class="header_creaC">mise a jour</th>
             </tr>
             </thead>
             <tbody>
@@ -36,9 +36,9 @@
                     <td>{{$hist->genre_id}}</td>
                     <td>
                         @if($hist->active == '1')
-                            <span style="color: green;">Visible</span>
+                            <span style="color: #38c172; text-shadow: 0px 0px 13px greenyellow">Visible</span>
                         @else
-                            <span style="color: red;">Invisible</span>
+                            <span style="color: #e14b5c; text-shadow: 0px 0px 15px coral">Invisible</span>
                         @endif
                     </td>
                     <td>{{$hist->created_at}}</td>
@@ -57,7 +57,7 @@
             <h3><i class="far fa-edit"></i> Création d'un chapitre</h3>
 
         </div>
-        <div class="form-group_creaC">
+        <div class="form-group">
             <label class="col-md-3 form-control-label" for="histoire_id"><strong>Associé à l'histoire : </strong></label>
 
             <div class="input-group date">
@@ -69,7 +69,7 @@
             </div>
 
         </div>
-        <div class="form-group_creaC">
+        <div class="form-group">
 
 
             <div class="input-group date">
@@ -79,7 +79,7 @@
             </div>
 
         </div>
-        <div class="form-group_creaC">
+        <div class="form-group">
 
 
             <div class="input-group date">
@@ -89,7 +89,7 @@
             </div>
 
         </div>
-        <div class="form-group_creaC">
+        <div class="form-group">
             <label class="col-md-3 form-control-label" for="titre"><strong>Est-ce le premier chapitre : </strong></label>
 
             <div class="input-group date">
@@ -98,7 +98,7 @@
             </div>
 
         </div>
-        <div class="form-group_creaC">
+        <div class="form-group">
             <label class="col-md-3 form-control-label" for="texte"><strong>Votre texte : </strong></label>
 
             <div class="input-group date">
@@ -108,7 +108,7 @@
             </div>
 
         </div>
-        <div class="form-group_creaC">
+        <div class="form-group">
             <label class="col-md-3 form-control-label" for="photo"><strong>Photo : </strong></label>
 
             <div class="input-group date">
@@ -116,7 +116,7 @@
             </div>
 
         </div>
-        <div class="form-group_creaC">
+        <div class="form-groupC">
 
 
             <div class="input-group date">
@@ -126,7 +126,7 @@
             </div>
 
         </div>
-        <div class="footer_creaC">
+        <div class="text-center">
             <button class="btn btn-success" type="submit">Valider</button>
         </div>
     </form>

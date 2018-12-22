@@ -604,9 +604,10 @@ button{
     padding: 0.4rem 1rem;
     border: solid 1px transparent;
     border-radius: 20px;
-
 }
-
+.button_lier{
+    margin-top: 0;
+}
 .btn{
     text-decoration: none;
     color: white;

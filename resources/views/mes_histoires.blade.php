@@ -20,52 +20,52 @@
             <table class="table">
             <thead style="background-color: #ddd; font-weight: bold;">
             <tr>
-                <td class="header-lol">N° Histoire</td>
-                <td class="header-lol">Titre</td>
-                <td class="header-lol">Descrition</td>
-                <td class="header-lol">Genre</td>
-                <td class="header-lol">Visibilité</td>
-                <td class="header-lol">Créée le</td>
-                <td class="header-lol">Dernière update</td>
-                <td class="header-lol">Liaison</td>
-                <td class="header-lol">ON/OFF</td>
+                <th class="header-lol">N° Histoire</th>
+                <th class="header-lol">Titre</th>
+                <th class="header-lol">Descrition</th>
+                <th class="header-lol">Genre</th>
+                <th class="header-lol">Visibilité</th>
+                <th class="header-lol">Créée le</th>
+                <th class="header-lol">Dernière update</th>
+                <th class="header-lol">Liaison</th>
+                <th class="header-lol">ON/OFF</th>
             </tr>
             </thead>
             <tbody>
-
-            @foreach($histoire as $hist)
-                @if(\Illuminate\Support\Facades\Auth::user()->id == $hist->user_id)
-                    <tr>
-                        <td>{{$hist->id}}</td>
-                        <td>{{$hist->titre}}</td>
-                        <td>{{$hist->pitch}}</td>
-                        <td>
-                            @php($listeGenre = DB::table('genre')->get())
-                            @foreach($listeGenre as $genre)
-                                @if($genre->id == $hist->genre_id)
-                                    {{$genre->label}}
+            @if (Auth::user())
+                @foreach($histoire as $hist)
+                    @if(\Illuminate\Support\Facades\Auth::user()->id == $hist->user_id)
+                        <tr>
+                            <td>{{$hist->id}}</td>
+                            <td>{{$hist->titre}}</td>
+                            <td>{{$hist->pitch}}</td>
+                            <td>
+                                @php($listeGenre = DB::table('genre')->get())
+                                @foreach($listeGenre as $genre)
+                                    @if($genre->id == $hist->genre_id)
+                                        {{$genre->label}}
+                                    @endif
+                                @endforeach
+                            </td>
+                            <td>
+                                @if($hist->active == '1')
+                                    <span style="color: #38c172; text-shadow: 0px 0px 13px greenyellow">Visible</span>
+                                @else
+                                    <span style="color: #e14b5c; text-shadow: 0px 0px 15px coral">Invisible</span>
                                 @endif
-                            @endforeach
-                        </td>
-                        <td>
-                            @if($hist->active == '1')
-                                <span style="color: green;">Visible</span>
-                            @else
-                                <span style="color: red;">Invisible</span>
-                            @endif
-                        </td>
-                        <td>{{$hist->created_at}}</td>
-                        <td>{{$hist->updated_at}}</td>
-                        <td>
-                            <a href="{{ route('lier_chapitre', [$hist->id]) }}">Lier</a>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="{{'active.'.$hist->id}}" id="{{'active'.$hist->id}}"  {{($hist->active ? "checked" : "")}}>
-                        </td>
-                    </tr>
-                @endif
-            @endforeach
-
+                            </td>
+                            <td>{{$hist->created_at}}</td>
+                            <td>{{$hist->updated_at}}</td>
+                            <td>
+                                <button class="button_lier"><a href="{{ route('lier_chapitre', [$hist->id]) }}">Lier</a></button>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="{{'active.'.$hist->id}}" id="{{'active'.$hist->id}}"  {{($hist->active ? "checked" : "")}}>
+                            </td>
+                        </tr>
+                    @endif
+                @endforeach
+            @endif
             </tbody>
         </table>
         <div class="text-center">

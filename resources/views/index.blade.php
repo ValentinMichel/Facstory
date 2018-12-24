@@ -9,7 +9,7 @@
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-indenter         </div>
+        </div>
     @endif
 
 <section class="banner">

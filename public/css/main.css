@@ -173,13 +173,13 @@ body{
 
     .title{
         font-size:90px !important;
-        margin-bottom:0;
+        display: none;
     }
 
     .subtitle{
         font-size:40px !important;
         position:absolute;
-        top:10%;
+        top:30%;
     }
 
 
@@ -350,7 +350,7 @@ body{
     font-weight:500;
     color:#fff;
     position:absolute;
-    top:37%;
+    top:45%;
     left:8%;
     font-family: 'Roboto', sans-serif;
 }
